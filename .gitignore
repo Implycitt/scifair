@@ -1,0 +1,7 @@
+secrets.h
+
+dashboard/
+dashboard.log
+
+readings.db-shm
+readings.db-wal
