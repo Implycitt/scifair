@@ -17,11 +17,10 @@ This section is going to get documented just in case. Although the setup process
 
 This section documents how sensor readings get from an ESP32 onto a home server Network Attached Storage (NAS).
 
----
-
 ## Overview
 
 The main challenge that is faced when using a microcontroller for getting data is that there is nowhere for it to be stored on the device. Additionally, it would be nice to be able to see the data from multiple devices. To overcome these issues, a server was used to set up an ingest proxy as well as host a dashboard that allows us to view the data.
+<br><br>
 
 ```
                        Proxmox host               NAS storage
@@ -42,6 +41,7 @@ The main challenge that is faced when using a microcontroller for getting data i
                                                   └─────────────────┘
 ```
 
+<br>
 Two containers share one storage volume: the **ingest** container writes the database, and the **nas** container serves that same directory over SMB.
 
 ---
@@ -135,6 +135,8 @@ id device   boot       seq timestamp                 temp humidity co2
  3 esp32-01 1793574771   1 2026-11-01T23:12:51+00:00 21.5 40.2     812
  1 test     b1           1 2026-11-01T17:54:36+00:00 21.5 40       800
 ```
+
+---
 
 ## The Dashboard
 
